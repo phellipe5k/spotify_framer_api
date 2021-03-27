@@ -1,5 +1,5 @@
 const express = require('express');
-require('dotenv').config()
+require('dotenv').config();
 const request = require('request');
 const querystring = require('querystring');
 
@@ -13,7 +13,7 @@ app.get('/login', function(req, res) {
       response_type: 'code',
       client_id: process.env.SPOTIFY_CLIENT_ID,
       scope: 'user-read-private user-read-email',
-      redirect_uri
+      redirect_uri: 'https://spotify-frame.vercel.app/'
     }))
 })
 
